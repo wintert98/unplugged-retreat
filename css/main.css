@@ -586,6 +586,11 @@ input[type=button] {
       width: 62%;
   }
 
+  .features i {
+    font-size: 3.75em;
+          margin-bottom: 40px;
+  }
+
   /* Reviews */
   .reviews article {
     display: flex;
