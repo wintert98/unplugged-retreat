@@ -128,6 +128,14 @@ h4 {
   font-size: 1.125em;
  
 }
+
+img {
+  width: 100%;
+ }
+  
+ figure {
+  margin: 0;
+ }
  
 p {
 	font-size: .875em;
@@ -168,6 +176,14 @@ address {
      flex-flow: row wrap;
      margin: 0;
  }
+
+ header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
  .header-divider {
    background: #3a3a3a; 
@@ -242,6 +258,10 @@ footer .copyright {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('../img/jake-melara-30679-unsplash.jpg') center no-repeat #333;
+  background-size: cover;
+  
+  
 
 }
 
@@ -259,6 +279,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 
 }
 
@@ -291,9 +312,11 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url('../img/rawpixel-800820-unsplash1.jpg') center no-repeat #333;
+  background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
 
 }
 
@@ -315,6 +338,7 @@ input[type=button] {
 }
 
 .features p {
+  text-align: center;
   margin: 0;
 }
 
@@ -505,6 +529,10 @@ input[type=button] {
       justify-content: space-between;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   header nav {
       width: 20%;
   }
@@ -519,6 +547,16 @@ input[type=button] {
   }
 
      /* Hero Area */
+
+     .hero-area {
+      min-height: 600px;
+    }
+  
+    .hero-area h1 {
+      font-size: 3em;
+      line-height: 1;
+      margin: 0;
+  }
  
     /* Aside */
     aside .content-wrapper {
@@ -629,9 +667,28 @@ footer .copyright {
     @media only screen and (min-width: 1200px) {
     /*Desktop styles here*/
 
-    .content-wrapper {
-      max-width: 960px;
-    }
+    
+  header {
+    padding: 15px 0;
+  }
+
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
+  }
   
     /* Hero */
     .hero-area h1 {
@@ -646,6 +703,10 @@ footer .copyright {
     aside .content-wrapper .form-description,
     aside .content-wrapper .form {
       width: 30%;
+    }
+
+    .form-description p {
+      font-size: 1.125em;
     }
   
     /* Features */
@@ -663,6 +724,14 @@ footer .copyright {
       width: 42%;
     }
   
+    .reviews h2 {
+      padding-bottom: 50px;
+    }
+  
+    footer h4 {
+      font-size: 1.875em;
+    }
+  
     /* ==========================================================================
     About Page
     ========================================================================== */
@@ -671,6 +740,10 @@ footer .copyright {
     .contact-section .content-wrapper h2 {
         width: 95%;
     }
+
+    .contact-content h4 {
+      font-size: 1.875em;
+    }
   
     /* ==========================================================================
     FAQ Page
@@ -678,6 +751,13 @@ footer .copyright {
     .faq h2 {
       width: 100%;
     }
+
+    .faq h4,
+    .faq p {
+        font-size: 1.125em;
+        line-height: 1;
+    }
+    
     }  /* End of Desktop styles*/
 
 @media print,
