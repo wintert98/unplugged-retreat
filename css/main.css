@@ -104,6 +104,8 @@ body {
 ul, 
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
  
 }
  
@@ -117,6 +119,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.875em;
+  margin: 0;
  
 }
  
@@ -124,9 +127,13 @@ h3,
 h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  margin: 20px 0;
   font-size: 1.125em;
- 
+  margin: 20px 0;
+}
+
+p {
+	font-size: .875em;
+  line-height: 1.285;
 }
 
 img {
@@ -136,13 +143,6 @@ img {
  figure {
   margin: 0;
  }
- 
-p {
-	font-size: .875em;
-  line-height: 1.285;
-}
- 
-
  
 address {
   font-style: normal;
@@ -170,11 +170,12 @@ address {
  }
 
  header .content-wrapper {
+     margin: 0;
      display: flex;
      justify-content: center;
      align-items: center;
      flex-flow: row wrap;
-     margin: 0;
+     
  }
 
  header figure {
@@ -187,12 +188,13 @@ address {
 
  .header-divider {
    background: #3a3a3a; 
-   width: 100%;
    height: 1px;
+   width: 100%;
    margin: 10px 0 20px 0;
  }
 
  header nav {
+  width: 60%;
   font-size: 1.125em;
   font-weight: 700;
   text-transform: uppercase;
@@ -200,14 +202,12 @@ address {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
  }
 
  header nav ul {
-  display: flex;
-  justify-content: center;
   width: 100%;
-   
+  display: flex;
+  justify-content: space-around;
 }
 
 header nav ul li {
@@ -234,7 +234,7 @@ footer .contact {
 
 footer .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
    
 }
@@ -262,11 +262,12 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: url('../img/jake-melara-30679-unsplash.jpg') center no-repeat #333;
   background-size: cover;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
   
   
 
@@ -282,12 +283,11 @@ footer .copyright {
 /* Aside */
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
-
 }
 
 aside .form {
@@ -319,8 +319,9 @@ input[type=button] {
 /* Features */
 
 .features {
-  background: url('../img/rawpixel-800820-unsplash1.jpg') center no-repeat #333;
+  background: url('../img/rawpixel-800820-unsplash1.jpg');
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -342,6 +343,11 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
 
+}
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 .features p {
@@ -374,6 +380,7 @@ input[type=button] {
    ========================================================================== */
 
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,7 +388,24 @@ input[type=button] {
 
 }
 
+.map figure {
+  width: 100%;
+  height: 0; 
+  padding-bottom: 125%; 
+  overflow: hidden;
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -398,6 +422,7 @@ input[type=button] {
    ========================================================================== */
 
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -580,6 +605,9 @@ input[type=button] {
   }
 
   /* Features */
+  .features h2 {
+    margin-bottom: 20px;
+  }
 
   .features article {
     display: flex;
@@ -605,9 +633,19 @@ input[type=button] {
 
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
+  .reviews article figure,
   .reviews article div {
-    width: 49%        
-}
+    width: 49%;
+  }
+
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
 
 /* Footer */
 footer .content-wrapper {
@@ -619,10 +657,25 @@ footer .content-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 footer .contact {
     margin-bottom: 0;
+}
+
+footer p {
+  line-height: 1.285;
+}
+
+footer .social-icons {
+width: 12.5em;
+justify-content: space-between;
+}
+
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
 }
 
 footer .copyright {
@@ -725,7 +778,7 @@ footer .copyright {
   
     aside .content-wrapper .form-description,
     aside .content-wrapper .form {
-      width: 40%;
+      width: 30%;
     }
 
     .form-description p {
